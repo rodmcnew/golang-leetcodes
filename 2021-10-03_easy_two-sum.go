@@ -23,8 +23,8 @@ func twoSum(nums []int, target int) []int {
     // fmt.Print("sorted Nums", sortedNums)
     
     // Move the left and right pointers inward until we find the match
-    var left int = 0
-    var right = len(nums) - 1
+    left := 0
+    right := len(nums) - 1
     for left < right {
         var sum = sortedNums[left].value + sortedNums[right].value
         // fmt.Print("in loop [", left, sortedNums[left].value, "] + [", right, sortedNums[right].value, "] = ", sum, "\n");
