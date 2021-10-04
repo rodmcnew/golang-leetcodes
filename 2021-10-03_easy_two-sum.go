@@ -1,9 +1,10 @@
 // https://leetcode.com/problems/two-sum/
 
 import (
-	"fmt"
+    "fmt"
     "sort"
 )
+
 	
 type num struct {
     index int
