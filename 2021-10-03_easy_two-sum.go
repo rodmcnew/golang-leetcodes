@@ -14,7 +14,7 @@ type num struct {
 func twoSum(nums []int, target int) []int {
     
     // Get the nums sorted while remembering their original indices
-    var sortedNums = make([]num,len(nums))
+    var sortedNums = make([]num, len(nums))
     for index, value := range nums {
         sortedNums[index].index = index
         sortedNums[index].value = value
