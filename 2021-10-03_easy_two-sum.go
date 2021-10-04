@@ -21,7 +21,7 @@ func twoSum(nums []int, target int) []int {
     left := 0
     right := len(nums) - 1
     for left < right {
-        var sum = sortedNums[left].value + sortedNums[right].value
+        sum := sortedNums[left].value + sortedNums[right].value
         if sum > target {
             right--;
         } else if sum < target {
