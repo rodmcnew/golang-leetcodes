@@ -27,7 +27,7 @@ func twoSum(nums []int, target int) []int {
         } else if sum < target {
             left++;
         } else {
-            return []int{sortedNums[left].index,sortedNums[right].index}
+            return []int{sortedNums[left].index, sortedNums[right].index}
         }
     }
     
