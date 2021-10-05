@@ -31,6 +31,5 @@ func twoSum(nums []int, target int) []int {
         }
     }
     
-    // This should never happen but is needed for typing
-    return []int{}
+    panic("No solution found.")
 }
