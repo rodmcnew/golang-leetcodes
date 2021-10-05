@@ -16,12 +16,9 @@ func twoSum(nums []int, target int) []int {
         return nums[sortedIndicies[a]] < nums[sortedIndicies[b]]
     })
 
-    // Start with a pointer on each side of the sorted nums
-    left := 0
-    right := len(sortedIndicies) - 1
-        
-    // Move the left and right pointers inward until we find the match
-    for left < right {
+    // Start with a pointer on each side of the sorted nums       
+    // Then move the left and right pointers inward until we find the match
+    for left, right := 0, len(sortedIndicies) - 1; left < right; {
         leftI := sortedIndicies[left]
         rightI := sortedIndicies[right]
         
