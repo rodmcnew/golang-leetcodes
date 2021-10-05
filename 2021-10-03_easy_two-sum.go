@@ -6,28 +6,37 @@ import (
 )
 
 func twoSum(nums []int, target int) []int {
-    
-    // Get the nums into a data structure that we can sort while remembering their indicies
-    sortedNums := make([]struct{index, value int}, len(nums))
-    for index, value := range nums {
-        sortedNums[index].index = index
-        sortedNums[index].value = value
+    // Create a slice of the num indicies so we can have a sorted view of the nums
+    sortedIndicies := make([]int, len(nums))
+    for i := range nums {
+        sortedIndicies[i] = i
     }
-    
-    // Sort the nums
-    sort.Slice(sortedNums, func(a, b int) bool {return sortedNums[a].value < sortedNums[b].value})
+
+    // Sort the indicies
+    sort.Slice(sortedIndicies, func(a, b int) bool {
+        return nums[sortedIndicies[a]] < nums[sortedIndicies[b]]
+    })
+
+    // Start with a pointer on each side of the sorted nums
+    left := 0
+    right := len(sortedIndicies) - 1
     
     // Move the left and right pointers inward until we find the match
-    left := 0
-    right := len(nums) - 1
     for left < right {
-        sum := sortedNums[left].value + sortedNums[right].value
+        leftI := sortedIndicies[left]
+        rightI := sortedIndicies[right]
+        
+        leftVal := nums[leftI]
+        rightVal := nums[rightI]
+        
+        sum := leftVal + rightVal
+        
         if sum > target {
             right--;
         } else if sum < target {
             left++;
         } else {
-            return []int{sortedNums[left].index, sortedNums[right].index}
+            return []int{leftI, rightI}
         }
     }
     
