@@ -20,18 +20,16 @@ func twoSum(nums []int, target int) []int {
     // Start with a pointer on each side of the sorted nums
     left := 0
     right := len(sortedIndicies) - 1
-    
-    var leftI, rightI, leftVal, rightVal, sum int;
-    
+        
     // Move the left and right pointers inward until we find the match
     for left < right {
-        leftI = sortedIndicies[left]
-        rightI = sortedIndicies[right]
+        leftI := sortedIndicies[left]
+        rightI := sortedIndicies[right]
         
-        leftVal = nums[leftI]
-        rightVal = nums[rightI]
+        leftVal := nums[leftI]
+        rightVal := nums[rightI]
         
-        sum = leftVal + rightVal
+        sum := leftVal + rightVal
         
         if sum > target {
             right--;
