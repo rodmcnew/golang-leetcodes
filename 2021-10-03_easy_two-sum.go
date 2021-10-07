@@ -53,7 +53,6 @@ import (
 )
 
 func twoSum(nums []int, target int) []int {
-    
     // Get the nums into a data structure that we can sort while remembering their indicies
     sortedNums := make([]struct{index, value int}, len(nums))
     for index, value := range nums {
