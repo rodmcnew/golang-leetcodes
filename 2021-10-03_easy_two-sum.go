@@ -21,12 +21,7 @@ func twoSum(nums []int, target int) []int {
     for left, right := 0, len(sortedIndicies) - 1; left < right; {
         leftI := sortedIndicies[left]
         rightI := sortedIndicies[right]
-        
-        leftVal := nums[leftI]
-        rightVal := nums[rightI]
-        
-        sum := leftVal + rightVal
-        
+        sum := nums[leftI] + nums[rightI]
         if sum > target {
             right--;
         } else if sum < target {
