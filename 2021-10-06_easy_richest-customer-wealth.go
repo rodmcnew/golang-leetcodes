@@ -21,7 +21,7 @@ func maximumWealth(accounts [][]int) int {
 
 
 
-//////// Concurrency isn't really needed for this problem be below is an example that uses concurrency anyways ////////
+//////// Concurrency isn't really needed for this problem but below is a solution that uses concurrency anyways ////////
 
 
 
