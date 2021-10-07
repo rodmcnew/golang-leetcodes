@@ -64,7 +64,8 @@ func twoSum(nums []int, target int) []int {
     // Sort the nums
     sort.Slice(sortedNums, func(a, b int) bool {return sortedNums[a].value < sortedNums[b].value})
     
-    // Move the left and right pointers inward until we find the match
+    // Start with a pointer on each side of the sorted nums       
+    // Then move the left and right pointers inward until we find the match
     left := 0
     right := len(nums) - 1
     for left < right {
